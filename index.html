@@ -221,14 +221,17 @@
     <div class="container center">
         <h2 class="title is-3">Domain, forward model, and noise level adaptation</h2>
         <!-- <div class="content has-text-justified"> -->
-        <p>
+        <p class="has-text-justified" style="width: 900px;">
           We performed a number of experiments to analyze the effects of shifts in different parts of the inverse problem.
           The shifts can occur in the data distribution \( \mathbf{x} \), the forward model \( \mathbf{A} \), and the measurement
-          noise \( \eta \).
+          noise \( \eta \). we start with a fixed base network, which we refer to as Base AR, and learn domain-specific rank-one modulations.
+          Base AR is trained to reconstruct MR images from \( 4\times\) radially sub-sampled Fourier measurements without any measurement noise.
         </p>
         <!-- <div> -->
       <div id="results-carousel" class="carousel results-carousel">
+
        <div class="item" width="300px">
+         <h2 class="title is-4">Domain shift adaptation</h2>
         <!-- Your image here -->
         <img src="static/images/domain_shift_cropped_updated_v2.png" alt="MY ALT TEXT" width="600" />
         <h2 style="font-size: 14px; max-width: 600px;" class="subtitle has-text-justified">
@@ -237,6 +240,7 @@
         </h2>
       </div>
       <div class="item">
+        <h2 class="title is-4">Sampling pattern adaptation</h2>
         <!-- Your image here -->
         <img src="static/images/sampling_pattern_shift.png" alt="MY ALT TEXT" width="600" />
         <h2 style="font-size: 14px; max-width: 600px;" class="subtitle has-text-justified">
@@ -245,6 +249,7 @@
       </div>
       <div class="item">
         <!-- Your image here -->
+        <h2 class="title is-4">Sampling ratio adaptation</h2>
         <img src="static/images/sampling_ratio_shift_all.png" alt="MY ALT TEXT" width="600" />
         <h2 style="font-size: 14px; max-width: 600px;" class="subtitle has-text-justified">
          Fig. 6:  Examples of image reconstruction under sampling ratio shifts. Our Modulated AR shows an average superior performance when compared to the 4×, 8×, and 10× AR networks.
@@ -252,6 +257,7 @@
      </div>
      <div class="item">
       <!-- Your image here -->
+      <h2 class="title is-4">Noise level shift adaptation</h2>
       <img src="static/images/noise_level_shift.png" alt="MY ALT TEXT" width="600" />
       <h2 style="font-size: 14px; max-width: 600px;" class="subtitle has-text-justified">
         Fig. 7: Visual results of models trained at specific noise levels and our modulated network under measurement level. The last row shows the $20\times$amplified residual of the reconstructed image under no measurement noise.
